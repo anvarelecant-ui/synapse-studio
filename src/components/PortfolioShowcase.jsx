@@ -124,7 +124,7 @@ export default function PortfolioShowcase({ t }) {
               }}
             >
               <img
-                src={project.image}
+                src={project.image.startsWith('http') ? project.image : `${import.meta.env.BASE_URL}${project.image.replace(/^\.?\//, '')}`}
                 alt={project.title}
                 loading="lazy"
                 className="project-preview-img"
