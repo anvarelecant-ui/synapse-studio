@@ -1,0 +1,246 @@
+:root {
+  --bg-primary: #f6f4ee;
+  --bg-secondary: #eee9dd;
+  --bg-surface: #ffffff;
+  
+  --text-primary: #191816;
+  --text-secondary: #57534c;
+  --text-muted: #888277;
+  
+  --accent-blue: #0284c7;
+  --accent-dark: #191816;
+  --accent-gradient: linear-gradient(135deg, #191816 0%, #3e3a35 100%);
+  
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-bg-hover: rgba(255, 255, 255, 0.95);
+  --glass-border: rgba(25, 24, 22, 0.08);
+  --glass-border-hover: rgba(25, 24, 22, 0.25);
+  --glass-shadow: 0 10px 30px rgba(25, 24, 22, 0.04);
+  
+  --font-display: 'Unbounded', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(2, 132, 199, 0.03) 0%, transparent 45%),
+    radial-gradient(circle at 85% 25%, rgba(180, 160, 130, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 50% 85%, rgba(255, 255, 255, 0.6) 0%, transparent 60%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3D WebGL background layer */
+#canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+.content-layer {
+  position: relative;
+  z-index: 10;
+}
+
+.container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Warm Cream Glass Panels & Cards */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 20px rgba(25, 24, 22, 0.03);
+  border-radius: 18px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.3s ease;
+  position: relative;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 12px 30px rgba(25, 24, 22, 0.08);
+}
+
+/* Typography styles */
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #191816 0%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+/* Minimalist pill badge */
+.badge-neon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(25, 24, 22, 0.04);
+  border: 1px solid rgba(25, 24, 22, 0.1);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+  backdrop-filter: blur(8px);
+}
+
+.pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+  animation: pulseAnimation 2.4s infinite;
+}
+
+@keyframes pulseAnimation {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+/* Tactile Minimalist Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--text-primary);
+  color: #ffffff;
+  border: none;
+  padding: 13px 28px;
+  border-radius: 100px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(25, 24, 22, 0.12);
+}
+
+.btn-primary:hover {
+  background: #2b2825;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(25, 24, 22, 0.18);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #ffffff;
+  color: var(--text-primary);
+  border: 1px solid rgba(25, 24, 22, 0.12);
+  padding: 13px 26px;
+  border-radius: 100px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.92rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(25, 24, 22, 0.04);
+}
+
+.btn-secondary:hover {
+  background: #fcfbf8;
+  border-color: rgba(25, 24, 22, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(25, 24, 22, 0.08);
+}
+
+/* Sections */
+section {
+  position: relative;
+  padding: 90px 0;
+  z-index: 10;
+}
+
+/* Custom Scrollbar in warm stone */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #d4cec4;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b5ada1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 0;
+  }
+  .container {
+    padding: 0 1.2rem;
+  }
+}
