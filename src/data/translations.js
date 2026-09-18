@@ -99,6 +99,17 @@ export const translations = {
       btn_order_similar: "Хочу похожий проект",
       items: [
         {
+          title: "AURA Development & Intelligence",
+          category: "Luxury Real Estate & Speech AI",
+          image: "/projects/aura.png",
+          browserUrl: "anvarelecant-ui.github.io/aura-development",
+          liveUrl: "https://anvarelecant-ui.github.io/aura-development/",
+          isExternal: true,
+          desc: "Премиальная девелоперская веб-платформа: покадровый BIM-таймлапс строительства при скролле, интерактивный калькулятор инвестиций и мультиязычный голосовой ИИ-консьерж в режиме реального звонка (RU/EN/UZ).",
+          tags: ["BIM Timelapse", "Speech AI", "Voice Call", "Vanilla JS", "i18n"],
+          orderMsg: "Здравствуйте! Интересует разработка премиального девелоперского сайта с 3D/BIM анимацией и голосовым ИИ, как AURA Development."
+        },
+        {
           title: "Fitrat Ta'lim Markazi",
           category: "EdTech Platform & 3D Web",
           image: "/projects/fitrat.png",
@@ -287,6 +298,17 @@ export const translations = {
       btn_order_similar: "Order Similar Project",
       items: [
         {
+          title: "AURA Development & Intelligence",
+          category: "Luxury Real Estate & Speech AI",
+          image: "/projects/aura.png",
+          browserUrl: "anvarelecant-ui.github.io/aura-development",
+          liveUrl: "https://anvarelecant-ui.github.io/aura-development/",
+          isExternal: true,
+          desc: "Flagship luxury real estate web platform featuring scroll-driven BIM construction timelapse, interactive mortgage & investment engine, and real-time multilingual hands-free voice AI concierge (RU/EN/UZ).",
+          tags: ["BIM Timelapse", "Speech AI", "Voice Call", "Vanilla JS", "i18n"],
+          orderMsg: "Hello! I am interested in building a luxury developer portal with 3D/BIM timelapse and voice AI like AURA Development."
+        },
+        {
           title: "Fitrat Ta'lim Markazi",
           category: "EdTech Platform & 3D Web",
           image: "/projects/fitrat.png",
@@ -474,6 +496,17 @@ export const translations = {
       btn_view_demo: "Telegramda demo",
       btn_order_similar: "Shunday loyiha buyurtma qilish",
       items: [
+        {
+          title: "AURA Development & Intelligence",
+          category: "Luxury Real Estate & Speech AI",
+          image: "/projects/aura.png",
+          browserUrl: "anvarelecant-ui.github.io/aura-development",
+          liveUrl: "https://anvarelecant-ui.github.io/aura-development/",
+          isExternal: true,
+          desc: "Hashamatli developerlik veb-platformasi: skroll orqali 3D/BIM qurilish bosqichlari taymlapsi, interaktiv ipoteka/investitsiya kalkulyatori hamda real vaqtdagi ko'p tilli ovozli AI konsyerj (UZ/RU/EN).",
+          tags: ["BIM Timelapse", "Speech AI", "Voice Call", "Vanilla JS", "i18n"],
+          orderMsg: "Salom! AURA Development kabi 3D/BIM animatsiyali va ovozli sun'iy intellektga ega premium sayt yaratish qiziqtirmoqda."
+        },
         {
           title: "Fitrat Ta'lim Markazi",
           category: "EdTech Platform & 3D Web",
